@@ -1,40 +1,163 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 :root {
-    --primary-clr: hsl(100, 50%, 100%)
+  --primary-clr: #fff;
+  --background-primary-clr: #2c2e31;
 }
 
 body {
-    background: hsl(270, 2%, 22%);
-    font-size: 16px;
+  background-color: #f9f9f9;
+  font-family: Ubuntu, sans-serif;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+  left: 0;
 }
 
-@media (max-width: 425px) {
-    /* .navbar {
+/* .navbar {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #222;
+    color: #fff;
+    z-index: 6;
+} */
 
-    } */
+.hero {
+  background: var(--background-primary-clr);
+  color: var(--primary-clr);
+  width: 100%;
+  min-height: 500px;
+  text-align: center;
+  overflow: hidden;
+}
 
-    .hero {
-        color: var(--primary-clr);
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.hero__header {
+  display: block;
+  margin: 0;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-top: 100px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.hero__description {
+  font-size: 18px;
+  font-weight: 100;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.hero__description > a {
+  color: #08a;
+  background: 0 0;
+}
+
+.hero__twitter {
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.5);
+  text-decoration: none;
+}
+
+.hero__twitter > img {
+  width: 25px;
+  margin-top: -3px;
+  margin-left: -25px;
+  position: absolute;
+}
+
+.cards {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -80px;
+  max-width: 730px;
+  /* margin: auto; */
+  overflow: hidden;
+  display: block;
+}
+
+.card {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgb(0 0 0 / 50%);
+  overflow: hidden;
+  text-align: center;
+  z-index: 5;
+  display: block;
+}
+
+.card__userPhoto {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+
+.card__userIntro {
+    color: #999;
+    font-size: 18px;
+    margin: 0;
+}
+
+.card__userName {
+    font-size: 28px;
+    color: #2c2e31;
+    margin: 5px;
+    text-transform: capitalize;
+    display: block;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+}
+
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+
+.card__userData {
+    margin-top: 25px;
     
-    }
-    
-    .hero__title {
-        position: absolute;
-        font-weight: 200;
-    }
-    
-    .cards {
-        background: hsl(100, 50%, 100%);
-    }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 425px) {
 }

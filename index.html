@@ -6,25 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front-end Test - YukBisnis</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <div class="container">
-        <div class="navbar"></div>
-        <div class="hero">
-            <h1 class="hero__text">RANDOM USER GENERATOR</h1>
-            <span class="hero__description"
-          >A free, <a href="https://github.com/RandomAPI/Randomuser.me-Node" target="_blank">open-source</a> API for generating random user data. Like Lorem
-          Ipsum, but for people.</span
-          >
-      </div>
-      <div class="card">
-          <img src="" alt="">
-          <div class="data__container"></div>
-        </div>
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="hero">
+      <h1 class="hero__header">Random User Generator</h1>
+      <p class="hero__description">
+        A free,
+        <a
+          class="hero__openSource"
+          href="https://github.com/RandomAPI/Randomuser.me-Node"
+          target="_blank"
+          >open-source</a
+        >
+        API for generating random user data. Like Lorem Ipsum, but for people.
+      </p>
+      <a href="https://twitter.com/randomapi" class="hero__twitter">
+        <img src="https://randomuser.me/img/twitter.png" alt="" />
+        Follow us @randomapi
+      </a>
     </div>
-    
-    
+    <div class="cards">
+      <div class="card">
+        
+        <div class="card__userData"></div>
+      </div>
+    </div>
+
+    <!-- unused JQuery -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
