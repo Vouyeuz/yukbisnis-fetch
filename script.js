@@ -6,6 +6,8 @@
 //     }
 //   });
 
+//!email mas yudi
+// yudi@yukbisnis.com
 
 fetch(`https://randomuser.me/api/`)
   .then((res) => res.json())

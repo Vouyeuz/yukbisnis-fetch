@@ -5,6 +5,36 @@
     text-decoration: none;
 }
 
+:root {
+    --primary-clr: hsl(100, 50%, 100%)
+}
+
 body {
-    background: hsl(270, 10%, 50%);
+    background: hsl(270, 2%, 22%);
+    font-size: 16px;
+}
+
+@media (max-width: 425px) {
+    /* .navbar {
+
+    } */
+
+    .hero {
+        color: var(--primary-clr);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .hero__title {
+        position: absolute;
+        font-weight: 200;
+    }
+    
+    .cards {
+        background: hsl(100, 50%, 100%);
+    }
 }
