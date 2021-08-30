@@ -3,7 +3,7 @@ fetch(`https://randomuser.me/api/`)
   .then(res => res.json())
   .then((res) => {
     const user = res.results[0];
-    console.log(user);
+    // console.log(user);
 
     const card = showCards(user);
 
@@ -17,7 +17,7 @@ document.addEventListener("click", async function(e) {
     const newUser = await fetch(`https://randomuser.me/api/`)
     .then(res => res.json())
     .then((res) => res.results[0]);
-    console.log(newUser);
+    // console.log(newUser);
 
     const nextCard = showCards(newUser);
 
@@ -26,7 +26,12 @@ document.addEventListener("click", async function(e) {
   }
 });
 
+// infinite scroll - ongoing!
 
+
+
+
+// DOM
 function showCards(user) {
   return `<div class="card__details">
             <div class="card__userPhoto">
