@@ -1,3 +1,4 @@
+// client-side rendering 
 fetch(`https://randomuser.me/api/`)
   .then(res => res.json())
   .then((res) => {
@@ -10,20 +11,26 @@ fetch(`https://randomuser.me/api/`)
     usersContainer.innerHTML = card;
   });
 
-// fetch(`https://randomuser.me/api/`)
-//   .then(res => res.json())
-//   .then((res) => {
-//     const nextUser = res.results[0];
+// server-side rendering while next link clicked (ajax)
+document.addEventListener("click", async function(e) {
+  if(e.target.matches(".card__nextUser")) {
+    const newUser = await fetch(`https://randomuser.me/api/`)
+    .then(res => res.json())
+    .then((res) => res.results[0]);
+    console.log(newUser);
 
-//     console.log(nextUser);
-//   })
+    const nextCard = showCards(newUser);
 
+    const newUserContainer = document.querySelector(".card");
+    newUserContainer.innerHTML = nextCard;
+  }
+});
 
 
 function showCards(user) {
   return `<div class="card__details">
             <div class="card__userPhoto">
-              <a href="/" class="card__nextUser">Next</a>
+              <a href="#" class="card__nextUser">Next</a>
               <img src="${user.picture.large}" />
             </div>
             <p class="card__userIntro">Hi, My name is</p>
